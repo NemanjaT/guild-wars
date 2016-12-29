@@ -5,7 +5,7 @@
     <parent>
         <artifactId>guild-wars</artifactId>
         <groupId>com.nemanjat94</groupId>
-        <version>0.0.1</version>
+        <version>${project-version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -19,4 +19,10 @@
             <version>1.2.17</version>
         </dependency>
     </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 </project>
