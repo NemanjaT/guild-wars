@@ -7,12 +7,16 @@
     <groupId>com.nemanjat94</groupId>
     <artifactId>guild-wars</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>${project-version}</version>
 
     <modules>
         <module>guild-wars-web</module>
         <module>guild-wars-frontend</module>
         <module>guild-wars-utilities</module>
     </modules>
+
+    <properties>
+        <project-version>0.0.1</project-version>
+    </properties>
 
 </project>
