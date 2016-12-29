@@ -1,0 +1,25 @@
+{
+  "name": "guild-wars-frontend",
+  "version": "0.0.1",
+  "description": "Guild Wars Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nemanja Tozic",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/core": "^2.4.1",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jquery": "^3.1.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^1.2.1",
+    "style": "0.0.3",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^1.3.3",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0"
+  }
+}
