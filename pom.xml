@@ -12,6 +12,7 @@
     <modules>
         <module>guild-wars-web</module>
         <module>guild-wars-frontend</module>
+        <module>guild-wars-utilities</module>
     </modules>
 
 </project>
