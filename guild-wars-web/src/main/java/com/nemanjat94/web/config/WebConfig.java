@@ -1,5 +1,6 @@
 package com.nemanjat94.web.config;
 
+import com.nemanjat94.util.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -35,10 +36,13 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
   private static final String FILE_RES_HANDLER = "/f/**";
   private static final String FILE_RES_LOCATION = "/public/";
 
+  private static final Logger log = Logger.getLogger(WebConfig.class);
+
   private ApplicationContext applicationContext;
 
   @Override
   public void configureViewResolvers(ViewResolverRegistry registry) {
+    log.debug("Configuring view resolvers.");
     ThymeleafViewResolver resolver = new ThymeleafViewResolver();
     resolver.setTemplateEngine(templateEngine());
     resolver.setCharacterEncoding("UTF-8");
@@ -47,6 +51,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 
   @Bean
   public TemplateEngine templateEngine() {
+    log.debug("Configuring template engine.");
     SpringTemplateEngine engine = new SpringTemplateEngine();
     engine.setEnableSpringELCompiler(true);
 
@@ -62,11 +67,14 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 
   @Override
   public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+    log.debug("Enabling default servlet handler configurer...");
     configurer.enable();
   }
 
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    log.debug("Adding resource handlers.");
+
     /* Handler for CSS resources */
     registry.addResourceHandler(CSS_RES_HANDLER)
         .addResourceLocations(CSS_RES_LOCATION);
@@ -88,6 +96,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 
   @Override
   public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    log.debug("Setting application context");
     this.applicationContext = applicationContext;
   }
 }
